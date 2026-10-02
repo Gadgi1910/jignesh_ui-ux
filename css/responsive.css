@@ -1,0 +1,769 @@
+@media(min-width:1440px) {
+    .hero-art {
+        right: 70px;
+        top: 190px;
+        width: 290px;
+        height: 260px
+    }
+
+    .hero {
+        min-height: 850px
+    }
+
+    .hero-bottom {
+        margin-top: 55px
+    }
+}
+
+@media(max-width:1150px) {
+    .desktop-nav {
+        margin-right: 10px;
+        gap: 24px
+    }
+
+    .availability {
+        font-size: 8px
+    }
+
+    .hero-art {
+        width: 205px;
+        height: 200px;
+        top: 150px
+    }
+
+    .hero-bottom {
+        gap: 30px
+    }
+
+    .hero-actions {
+        gap: 16px
+    }
+
+    .hero-actions .button {
+        padding-inline: 18px;
+        gap: 18px
+    }
+
+    .hero-description {
+        font-size: 15px
+    }
+
+    .hero-meta-group {
+        gap: 22px
+    }
+
+    .contact-layout {
+        gap: 65px
+    }
+}
+
+@media(min-width:768px) and (max-width:1023px) {
+    .header-inner>.availability {
+        display: none
+    }
+
+    .desktop-nav {
+        margin-right: 0
+    }
+
+    .hero {
+        min-height: 800px;
+        padding-top: 175px
+    }
+
+    .hero-art {
+        top: 167px;
+        width: 165px;
+        height: 165px
+    }
+
+    .hero-bottom {
+        margin-top: 55px;
+        grid-template-columns: 1fr 1fr
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .hero-meta-group {
+        gap: 20px
+    }
+
+    .hero-meta .eyebrow {
+        font-size: 8px
+    }
+
+    .profile-art-copy {
+        padding: 35px
+    }
+
+    .split-section,
+    .testimonial-inner,
+    .case-section {
+        grid-template-columns: 1fr 2fr;
+        gap: 30px
+    }
+
+    .service-row summary {
+        grid-template-columns: 45px 1fr 40px
+    }
+
+    .service-body {
+        padding-left: 77px
+    }
+
+    .contact-title {
+        font-size: 8.4vw
+    }
+
+    .contact-layout {
+        gap: 40px
+    }
+
+    .email-button {
+        font-size: 22px
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr
+    }
+}
+
+@media(max-width:767px) {
+    :root {
+        --gutter: 20px;
+        --section-space: 80px
+    }
+
+    .header-inner {
+        height: 72px
+    }
+
+    .wordmark {
+        font-size: 12px
+    }
+
+    .desktop-nav,
+    .header-inner>.availability {
+        display: none
+    }
+
+    .menu-toggle {
+        display: flex
+    }
+
+    .mobile-menu {
+        display: flex
+    }
+
+    .hero {
+        min-height: 780px;
+        min-height: 95svh;
+        padding-top: 140px;
+        padding-bottom: 22px
+    }
+
+    .hero-topline {
+        margin-bottom: 72px
+    }
+
+    .hero-topline .edition {
+        display: none
+    }
+
+    .hero-topline>.eyebrow {
+        font-size: 10px
+    }
+
+    .hero-title {
+        font-size: clamp(36px, 11.3vw, 78px);
+        letter-spacing: -.06em;
+        line-height: 1.11
+    }
+
+    .hero-art {
+        top: 95px;
+        right: 12px;
+        width: 120px;
+        height: 120px;
+        opacity: .7
+    }
+
+    .art-caption {
+        display: none
+    }
+
+    .hero-bottom {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 35px;
+        margin-bottom: 47px
+    }
+
+    .hero-description {
+        font-size: 15px;
+        max-width: 440px;
+        grid-row: 1
+    }
+
+    .hero-actions {
+        flex-wrap: wrap;
+        gap: 22px
+    }
+
+    .hero-actions .button {
+        padding: 14px 18px;
+        font-size: 10px;
+        gap: 18px
+    }
+
+    .hero-actions .text-link {
+        font-size: 9px;
+        gap: 9px
+    }
+
+    .hero-meta {
+        gap: 20px;
+        padding-top: 18px;
+        align-items: flex-end
+    }
+
+    .hero-meta-group {
+        gap: 15px;
+        flex-wrap: wrap;
+        max-width: 260px
+    }
+
+    .hero-meta .eyebrow {
+        font-size: 8px
+    }
+
+    .hero-meta-group>span:last-child {
+        width: 100%
+    }
+
+    .hero-meta .scroll-cue span {
+        display: none
+    }
+
+    .hero-meta .scroll-cue .arrow {
+        display: block;
+        font-size: 18px
+    }
+
+    .home-work {
+        padding-top: 70px
+    }
+
+    .section-top {
+        display: block;
+        margin-bottom: 32px
+    }
+
+    .section-top p {
+        margin-top: 25px;
+        max-width: 300px;
+        font-size: 13px
+    }
+
+    .section-heading {
+        font-size: 46px
+    }
+
+    .section-index {
+        font-size: 10px;
+        margin-top: 6px
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
+        gap: 42px
+    }
+
+    .project-visual {
+        aspect-ratio: 1.25
+    }
+
+    .project-badge {
+        top: 14px;
+        left: 14px;
+        font-size: 8px
+    }
+
+    .project-caption {
+        padding-top: 17px;
+        padding-bottom: 18px
+    }
+
+    .project-heading h3 {
+        font-size: 29px
+    }
+
+    .project-open {
+        transform: none;
+        bottom: 14px;
+        right: 14px;
+        width: 32px;
+        height: 32px;
+        font-size: 17px
+    }
+
+    .project-subline {
+        font-size: 9px
+    }
+
+    .project-description {
+        font-size: 12px
+    }
+
+    .project-services {
+        font-size: 9px
+    }
+
+    .archive-bottom {
+        align-items: flex-start;
+        gap: 25px;
+        flex-direction: column;
+        padding-top: 30px
+    }
+
+    .split-section,
+    .testimonial-inner,
+    .case-section {
+        grid-template-columns: 1fr;
+        gap: 30px
+    }
+
+    .intro-statement {
+        padding-top: 60px
+    }
+
+    .large-copy {
+        font-size: 30px
+    }
+
+    .testimonial {
+        padding-block: 65px
+    }
+
+    .testimonial blockquote {
+        font-size: 30px
+    }
+
+    .quote-mark {
+        font-size: 60px
+    }
+
+    .contact-band {
+        padding-block: 70px
+    }
+
+    .contact-band h2 {
+        font-size: clamp(46px, 10.5vw, 77px)
+    }
+
+    .contact-band-link>.arrow {
+        width: 53px;
+        height: 53px;
+        font-size: 30px
+    }
+
+    .contact-band-top .eyebrow {
+        font-size: 9px
+    }
+
+    .contact-band-top>.eyebrow:last-child {
+        display: none
+    }
+
+    .contact-band-bottom {
+        margin-top: 28px;
+        gap: 20px;
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .contact-band-bottom p {
+        font-size: 12px
+    }
+
+    .footer-top {
+        grid-template-columns: 1fr 1fr;
+        gap: 38px;
+        padding-bottom: 45px
+    }
+
+    .footer-about {
+        grid-column: 1/-1
+    }
+
+    .footer-name {
+        font-size: 11.5vw;
+        letter-spacing: -.07em
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+        font-size: 8px;
+        gap: 15px
+    }
+
+    .footer-bottom .footer-credit {
+        display: none
+    }
+
+    .site-footer {
+        padding-top: 45px
+    }
+
+    .page-intro {
+        padding-top: 145px;
+        padding-bottom: 50px
+    }
+
+    .page-title {
+        font-size: clamp(67px, 19vw, 130px)
+    }
+
+    .page-intro .eyebrow {
+        margin-bottom: 28px
+    }
+
+    .page-deck {
+        font-size: 20px;
+        margin-top: 30px
+    }
+
+    .intro-bottom {
+        display: block
+    }
+
+    .archive-controls {
+        padding-block: 18px;
+        margin-bottom: 15px
+    }
+
+    .archive-controls .eyebrow {
+        font-size: 9px
+    }
+
+    .view-toggle button {
+        padding: 9px 13px;
+        font-size: 9px
+    }
+
+    .is-list .project-link {
+        grid-template-columns: 80px 1fr;
+        gap: 18px;
+        padding-block: 20px
+    }
+
+    .is-list .project-heading h3 {
+        font-size: 23px
+    }
+
+    .is-list .project-number {
+        display: none
+    }
+
+    .is-list .project-subline {
+        font-size: 8px;
+        gap: 7px;
+        flex-wrap: wrap;
+        margin-top: 9px
+    }
+
+    .is-list .project-visual {
+        aspect-ratio: 1
+    }
+
+    .is-list .project-heading>.arrow {
+        font-size: 20px
+    }
+
+    .profile-title {
+        font-size: clamp(37px, 8.3vw, 62px)
+    }
+
+    .profile-intro .page-deck {
+        margin-top: 30px
+    }
+
+    .profile-art {
+        grid-template-columns: 1fr
+    }
+
+    .profile-art-visual {
+        min-height: 360px
+    }
+
+    .profile-monogram {
+        font-size: 260px
+    }
+
+    .profile-art-copy {
+        padding: 32px
+    }
+
+    .profile-art-copy h2 {
+        font-size: 32px
+    }
+
+    .timeline {
+        margin-left: 4px;
+        padding-left: 25px
+    }
+
+    .timeline-item::before {
+        left: -28px
+    }
+
+    .timeline-item h3 {
+        font-size: 29px
+    }
+
+    .skills-grid {
+        gap: 0 23px
+    }
+
+    .skill-item {
+        font-size: 11px;
+        padding-block: 19px
+    }
+
+    .skill-item .eyebrow {
+        font-size: 8px
+    }
+
+    .service-row summary {
+        grid-template-columns: 28px 1fr 25px;
+        gap: 12px;
+        padding: 26px 5px
+    }
+
+    .service-row summary h2,
+    .service-row summary h3 {
+        font-size: 28px
+    }
+
+    .service-row summary>.arrow {
+        font-size: 25px
+    }
+
+    .service-row summary .eyebrow {
+        font-size: 9px
+    }
+
+    .service-body {
+        padding: 0 15px 28px 45px
+    }
+
+    .service-body h3 {
+        font-size: 18px
+    }
+
+    .service-body p {
+        font-size: 13px
+    }
+
+    .services-intro .page-title {
+        font-size: 17vw
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+        margin-top: 35px
+    }
+
+    .process-item h3 {
+        margin-top: 23px
+    }
+
+    .process-item p {
+        font-size: 12px
+    }
+
+    .contact-title {
+        font-size: clamp(43px, 10vw, 72px)
+    }
+
+    .contact-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+        padding-bottom: 70px
+    }
+
+    .contact-aside {
+        padding-top: 0
+    }
+
+    .email-button {
+        font-size: clamp(19px, 5.65vw, 27px);
+        gap: 12px
+    }
+
+    .contact-socials {
+        margin-top: 30px
+    }
+
+    .contact-note {
+        margin-top: 30px
+    }
+
+    .form-bottom {
+        gap: 20px;
+        align-items: flex-start;
+        flex-direction: column
+    }
+
+    .form-bottom p {
+        max-width: 100%
+    }
+
+    .project-intro {
+        padding-top: 130px;
+        padding-bottom: 35px
+    }
+
+    .project-intro h1 {
+        font-size: clamp(43px, 11vw, 75px)
+    }
+
+    .back-link {
+        margin-bottom: 30px
+    }
+
+    .project-intro .project-lead {
+        font-size: 23px;
+        line-height: 1.4
+    }
+
+    .project-facts {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+        margin-top: 30px
+    }
+
+    .project-facts>div:last-child {
+        grid-column: 1/-1
+    }
+
+    .project-facts dd {
+        font-size: 11px
+    }
+
+    .case-hero img {
+        aspect-ratio: 1.1
+    }
+
+    .case-section {
+        padding: 45px 0
+    }
+
+    .case-section h2 {
+        font-size: 29px
+    }
+
+    .case-section p {
+        font-size: 15px
+    }
+
+    .case-principles {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 40px 0 60px
+    }
+
+    .case-principles h3 {
+        font-size: 23px;
+        margin-top: 15px
+    }
+
+    .next-project {
+        padding-block: 45px
+    }
+
+    .next-project h2 {
+        font-size: 36px
+    }
+
+    .next-project .arrow {
+        font-size: 35px
+    }
+
+    .next-project-link {
+        gap: 22px
+    }
+
+    .toast {
+        font-size: 12px;
+        text-align: center
+    }
+
+    .loader-mark {
+        font-size: 70px
+    }
+}
+
+@media(max-width:360px) {
+    .hero-actions {
+        gap: 15px
+    }
+
+    .hero-actions .text-link {
+        font-size: 8px
+    }
+
+    .hero-meta-group {
+        gap: 10px
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr
+    }
+
+    .contact-title {
+        font-size: 10vw
+    }
+
+    .project-heading h3 {
+        font-size: 26px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important
+    }
+
+    .cursor {
+        display: none !important
+    }
+
+    .project-open {
+        transform: none
+    }
+
+    .timeline-progress {
+        transform: scaleY(1)
+    }
+
+    .hero-art canvas {
+        display: none
+    }
+
+    .hero-art.ready .art-fallback {
+        display: block
+    }
+}
+
+@media(max-width:767px){.cursor{display:none!important}.hero-meta .eyebrow{font-size:10px}.hero-topline>.eyebrow{font-size:11px}.image-dialog{width:calc(100% - 20px);padding:12px}.image-dialog-top .eyebrow{font-size:8px}}

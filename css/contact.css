@@ -1,0 +1,198 @@
+.contact-intro {
+    padding-bottom: 60px
+}
+
+.contact-title {
+    font-size: clamp(55px, 8.5vw, 120px);
+    line-height: 1.04;
+    font-weight: 500;
+    letter-spacing: -.07em
+}
+
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    padding-bottom: 100px
+}
+
+.contact-layout > * {
+    min-width: 0;
+}
+
+.contact-aside {
+    padding-top: 18px
+}
+
+.contact-aside>.eyebrow {
+    margin-bottom: 30px
+}
+
+.email-button {
+    font-size: clamp(20px, 2.5vw, 33px);
+    letter-spacing: -.045em;
+    border-bottom: 1px solid var(--ink);
+    padding: 5px 0 8px;
+    display: flex;
+    gap: 22px;
+    align-items: center
+}
+
+.email-button .arrow {
+    font-size: 23px
+}
+
+.copy-feedback {
+    display: inline-block;
+    font-size: 10px;
+    margin-top: 10px;
+    min-height: 20px;
+    color: var(--muted)
+}
+
+.contact-socials {
+    margin-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px 32px;
+    max-width: 340px
+}
+
+.contact-socials .social-link {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 9px
+}
+
+.contact-note {
+    margin-top: 55px;
+    max-width: 325px;
+    font-size: 13px;
+    line-height: 1.9;
+    color: var(--muted)
+}
+
+.contact-form {
+    border-top: 1px solid var(--line);
+    padding-top: 30px
+}
+
+.form-intro {
+    font-size: 22px;
+    letter-spacing: -.035em;
+    margin-bottom: 28px
+}
+
+.form-field {
+    position: relative;
+    margin-bottom: 25px;
+    padding-top: 18px
+}
+
+.form-field label {
+    position: absolute;
+    left: 0;
+    top: 30px;
+    color: var(--muted);
+    font-size: 14px;
+    pointer-events: none;
+    transform-origin: left;
+    transition: transform .25s, color .25s
+}
+
+.form-field:focus-within label,
+.form-field.has-value label,
+.form-field.select-field label {
+    transform: translateY(-25px) scale(.8);
+    color: var(--ink)
+}
+
+.form-field input,
+.form-field textarea,
+.form-field select {
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    background: transparent;
+    width: 100%;
+    padding: 11px 0;
+    color: var(--ink);
+    border-radius: 0;
+    font-size: 15px;
+    transition: border-color .25s
+}
+
+.form-field textarea {
+    min-height: 100px;
+    max-height: 400px
+}
+
+.form-field input:focus,
+.form-field textarea:focus,
+.form-field select:focus {
+    outline: none;
+    border-color: var(--ink);
+    box-shadow: 0 1px 0 var(--ink)
+}
+
+.form-field [aria-invalid=true] {
+    border-color: #a12e23
+}
+
+.field-error {
+    display: block;
+    font-size: 11px;
+    line-height: 1.4;
+    color: #a12e23;
+    margin-top: 6px;
+    min-height: 15px
+}
+
+.form-bottom {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    justify-content: space-between
+}
+
+.form-bottom p {
+    font-size: 10px;
+    line-height: 1.6;
+    color: var(--muted);
+    max-width: 190px
+}
+
+.form-success {
+    padding: 38px 28px;
+    background: var(--secondary);
+    border: 1px solid var(--line)
+}
+
+.form-success h2 {
+    font-size: 31px;
+    letter-spacing: -.05em;
+    font-weight: 500;
+    margin: 20px 0 14px
+}
+
+.form-success p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--muted)
+}
+
+.form-success .button {
+    margin-top: 24px
+}
+
+.success-mark {
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    background: var(--accent);
+    border-radius: 50%;
+    font-size: 23px
+}

@@ -1,0 +1,12 @@
+.tabler-icon { display: inline-block; flex-shrink: 0; width: 1em; height: 1em; vertical-align: middle; stroke-width: 1.75; }
+.arrow { display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
+.menu-plus { display: inline-flex; align-items: center; }
+.view-toggle .tabler-icon { width: 16px; height: 16px; }
+.back-top .tabler-icon { width: 16px; height: 16px; }
+.image-dialog-top button > .tabler-icon { width: 23px; height: 23px; }
+.email-button > .tabler-icon { width: 23px; height: 23px; }
+.social-name { display: inline-flex; align-items: center; gap: 7px; }
+.social-name .tabler-icon { width: 16px; height: 16px; }
+.copy-feedback .tabler-icon { width: 13px; height: 13px; }
+.select-field select { appearance: none; padding-right: 28px; }
+.select-field > .tabler-icon { position: absolute; right: 2px; top: 33px; width: 18px; height: 18px; pointer-events: none; }

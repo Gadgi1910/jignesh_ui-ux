@@ -1,0 +1,109 @@
+.services-intro .page-title {
+    font-size: clamp(75px, 12.5vw, 170px)
+}
+
+.service-list {
+    border-top: 1px solid var(--line)
+}
+
+.service-row {
+    border-bottom: 1px solid var(--line);
+    transition: background .4s
+}
+
+.service-row summary {
+    list-style: none;
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: 65px 1fr 50px;
+    align-items: center;
+    gap: 20px;
+    padding: 33px 12px
+}
+
+.service-row summary::-webkit-details-marker {
+    display: none
+}
+
+.service-row summary h2,
+.service-row summary h3 {
+    font-size: clamp(28px, 4.1vw, 58px);
+    font-weight: 500;
+    letter-spacing: -.055em;
+    line-height: 1.2
+}
+
+.service-row summary>.arrow {
+    font-size: 35px;
+    justify-self: end;
+    transition: transform .4s
+}
+
+.service-row[open] summary>.arrow {
+    transform: rotate(90deg)
+}
+
+.service-row:hover {
+    background: var(--secondary)
+}
+
+.service-body {
+    padding: 0 75px 35px 97px;
+    max-width: 840px
+}
+
+.service-body h3 {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: -.03em;
+    margin-bottom: 14px
+}
+
+.service-body p {
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.85
+}
+
+.service-body .eyebrow {
+    font-size: 10px;
+    margin-top: 20px
+}
+
+.home-services .section-top {
+    margin-bottom: 35px
+}
+
+.home-services .service-row summary {
+    padding-block: 26px
+}
+
+.home-services .service-row summary h3 {
+    font-size: clamp(28px, 3.9vw, 52px)
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px
+}
+
+.process-item {
+    border-top: 1px solid var(--line);
+    padding-top: 18px
+}
+
+.process-item h3 {
+    font-size: 23px;
+    letter-spacing: -.045em;
+    margin-top: 35px;
+    font-weight: 500
+}
+
+.process-item p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 15px;
+    line-height: 1.8
+}

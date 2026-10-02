@@ -1,0 +1,134 @@
+.contact-band {
+    padding-block: 100px
+}
+
+.contact-band-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px
+}
+
+.contact-band h2 {
+    font-size: clamp(54px, 9.5vw, 135px);
+    line-height: 1.08;
+    letter-spacing: -.07em;
+    font-weight: 500
+}
+
+.contact-band-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px
+}
+
+.contact-band-link>.arrow {
+    display: grid;
+    place-items: center;
+    border: 1px solid var(--ink);
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    flex-shrink: 0;
+    font-size: 49px;
+    transition: background .4s, transform .4s
+}
+
+.contact-band-link:hover>.arrow {
+    background: var(--accent);
+    transform: rotate(45deg)
+}
+
+.contact-band-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 35px
+}
+
+.contact-band-bottom p {
+    font-size: 13px;
+    color: var(--muted)
+}
+
+.site-footer {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 60px 0 24px;
+    overflow: hidden
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 30px;
+    padding-bottom: 60px
+}
+
+.footer-top .eyebrow {
+    color: #aaa9a2;
+    font-size: 10px
+}
+
+.footer-about p {
+    font-size: 15px;
+    letter-spacing: -.02em;
+    margin-top: 15px
+}
+
+.footer-nav,
+.footer-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 12px
+}
+
+.footer-nav .eyebrow,
+.footer-socials .eyebrow {
+    margin-bottom: 10px
+}
+
+.social-link {
+    transition: opacity .3s;
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 12px
+}
+
+.social-link:hover {
+    opacity: .6
+}
+
+.footer-name {
+    font-size: clamp(54px, 11.85vw, 169px);
+    letter-spacing: -.073em;
+    line-height: 1.13;
+    font-weight: 600;
+    white-space: nowrap;
+    margin-left: -.045em
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    border-top: 1px solid #ffffff2b;
+    padding-top: 22px;
+    margin-top: 30px;
+    font-size: 10px;
+    color: #aaa9a2
+}
+
+.back-top {
+    font-size: 10px;
+    color: var(--paper);
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    min-height: 30px
+}

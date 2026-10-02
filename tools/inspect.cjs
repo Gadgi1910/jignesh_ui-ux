@@ -1,0 +1,25 @@
+const { chromium } = require('../.tools/package');
+const fs = require('node:fs');
+(async () => {
+  fs.mkdirSync('test-results',{recursive:true});
+  const browser = await chromium.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe', headless:true, args:['--enable-webgl','--ignore-gpu-blocklist','--enable-unsafe-swiftshader']});
+  const page = await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+  const errors=[];
+  page.on('pageerror', error=>errors.push(error.message));
+  page.on('console', message=>{if(message.type()==='error'||message.type()==='warning')errors.push(message.type()+': '+message.text());});
+  await page.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle'});
+  await page.waitForTimeout(2400);
+  await page.screenshot({path:'test-results/home-desktop.png'});
+  fs.writeFileSync('test-results/inspection.json',JSON.stringify({title:await page.title(),errors,gsap:await page.evaluate(()=>typeof gsap),three:await page.evaluate(()=>!!document.querySelector('.hero-art canvas')),overflow:await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth)},null,2));
+  await page.evaluate(()=>window.scrollTo(0,850));
+  await page.waitForTimeout(1200);
+  await page.screenshot({path:'test-results/work-preview.png'});
+  await page.setViewportSize({width:390,height:844});
+  await page.goto('http://127.0.0.1:4173/',{waitUntil:'networkidle'});
+  await page.waitForTimeout(1800);
+  await page.screenshot({path:'test-results/home-mobile.png'});
+  const social = await browser.newPage({viewport:{width:1200,height:630},deviceScaleFactor:1});
+  await social.goto('http://127.0.0.1:4173/assets/images/social-preview.svg');
+  await social.screenshot({path:'assets/images/social-preview.png'});
+  await browser.close();
+})().catch(error=>{console.error(error);process.exitCode=1;});
