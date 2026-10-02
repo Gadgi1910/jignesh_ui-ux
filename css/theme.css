@@ -1,7 +1,7 @@
-/* One font family for every part of the interface, including metadata. */
+﻿/* Body typography also applies to controls and metadata. */
 body, button, input, textarea, select, .eyebrow, .section-index,
 .project-number, .cursor, .quote-mark, .profile-art-visual::after {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
 }
 :root {
   --font-sans: 'DM Sans', Arial, Helvetica, sans-serif;

@@ -1,7 +1,8 @@
+﻿h1, h2, h3, h4, h5, h6, .page-title, .section-heading, .wordmark, .footer-name, .loader-mark, .page-wipe { font-family: var(--font-heading); }
 body {
     background: var(--paper);
     color: var(--ink);
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     font-size: 16px;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased
@@ -49,7 +50,7 @@ select:focus-visible {
 }
 
 .eyebrow {
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     font-size: 11px;
     font-weight: 400;
     letter-spacing: .055em;
@@ -73,7 +74,7 @@ select:focus-visible {
 
 .arrow {
     display: inline-block;
-    font-family: Arial, sans-serif;
+    font-family: var(--font-body);
     font-weight: 400
 }
 
@@ -105,7 +106,7 @@ select:focus-visible {
 .section-index {
     vertical-align: top;
     display: inline-block;
-    font-family: var(--font-sans);
+    font-family: var(--font-body);
     font-size: 13px;
     letter-spacing: 0;
     margin: 10px 0 0 10px
@@ -307,7 +308,7 @@ select:focus-visible {
     color: var(--paper);
     align-items: center;
     justify-content: center;
-    font: 10px Manrope, Arial, sans-serif;
+    font: 10px var(--font-body);
     opacity: 0
 }
 

@@ -1,4 +1,4 @@
-.profile-title {
+﻿.profile-title {
     font-size: clamp(46px, 6.7vw, 94px);
     line-height: 1.1;
     letter-spacing: -.065em;
@@ -51,7 +51,7 @@
     position: absolute;
     left: 28px;
     bottom: 25px;
-    font: 9px 'Courier New', monospace;
+    font: 9px var(--font-body);
     letter-spacing: .1em
 }
 
