@@ -104,3 +104,15 @@ body, button, input, textarea, select, .eyebrow, .section-index,
 @media (max-width: 767px) {
   .header-tools .location-clock { top: 76px; }
 }
+
+/* Keep header labels readable at every breakpoint. */
+.site-header .wordmark,
+.site-header .nav-link,
+.site-header .location-clock,
+.site-header .header-cv,
+.site-header .menu-toggle { font-size: 16px; }
+
+@media (max-width: 360px) {
+  .header-inner { gap: 8px; row-gap: 0; }
+  .menu-toggle { margin-left: 0; }
+}
