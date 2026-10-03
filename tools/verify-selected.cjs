@@ -33,7 +33,7 @@ const target = process.argv[2] === 'work' ? 'work' : 'index';
         report.checks.push(`${theme}, ${width}px: six rows, links, images, layout and overflow passed`);
       }
     }
-    for (const file of ['index.html','work.html','profile.html','services.html','contact.html', ...projects.map(p=>p.link)]) {
+    for (const file of ['index.html','work.html','profile.html','contact.html', ...projects.map(p=>p.link)]) {
       const html = fs.readFileSync(file, 'utf8');
       assert(html.includes('tabler-icon'));
       assert(!/[↗↑↓✓×]/u.test(html), `${file}: old interface glyph`);

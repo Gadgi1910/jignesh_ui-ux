@@ -709,6 +709,7 @@
 }
 
 @media(max-width:360px) {
+    .email-button { font-size: 16px; gap: 8px; max-width: 100%; }
     .hero-actions {
         gap: 15px
     }

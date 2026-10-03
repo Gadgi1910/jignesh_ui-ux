@@ -2,7 +2,7 @@ const fs = require('node:fs');
 const { chromium } = require('../.tools/package');
 const assert = require('node:assert/strict');
 const { projects } = require('../js/content');
-const files=['index.html','work.html','profile.html','services.html','contact.html',...projects.map(p=>p.link)];
+const files=['index.html','work.html','profile.html','contact.html',...projects.map(p=>p.link)];
 const report={checks:[],errors:[],failedRequests:[]};
 const save=()=>fs.writeFileSync('test-results/redesign.json',JSON.stringify(report,null,2));
 async function check(name,fn){try{await fn();report.checks.push({name,passed:true});}catch(e){report.checks.push({name,passed:false,error:e.message});}save();}

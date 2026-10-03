@@ -492,3 +492,7 @@ noscript .notice {
 #main .case-intro {
     padding-top: var(--section-space);
 }
+/* The statistics replace the hero metadata without leaving its empty space. */
+#main > .hero { min-height: auto; }
+#main > .hero .hero-bottom { margin-bottom: 0; }
+#main > .section:has(+ [hidden] + .testimonial) { padding-bottom: 0; }

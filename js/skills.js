@@ -1,6 +1,6 @@
 async function initSkillsPlayground() {
   const arena = document.querySelector('[data-skills-arena]');
-  if (!arena || !window.Matter) return;
+  if (!arena || arena.closest('[hidden]') || !window.Matter) return;
   await document.fonts.ready;
   const { Engine, Bodies, Body, Composite, Sleeping } = Matter;
   const engine = Engine.create({ enableSleeping: true });

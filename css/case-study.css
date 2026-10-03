@@ -100,7 +100,7 @@
   display: inline-flex; align-items: center; gap: 16px;
   margin-top: 28px; padding: 6px 24px 6px 6px; min-height: 64px;
   border: 0; border-radius: 100px; background: var(--secondary); color: var(--ink);
-  font-family: var(--font-heading); font-size: 18px; font-weight: 500;
+  font-family: var(--font-body); font-size: 18px; font-weight: 500;
   line-height: 1.4; white-space: nowrap; transition: color .3s;
 }
 .preview-cta::before {
@@ -117,3 +117,10 @@
 .preview-cta:is(:hover, :focus-visible) { color: var(--on-accent); }
 .preview-cta:is(:hover, :focus-visible)::before { inset: 0; width: 100%; }
 .preview-cta:disabled { cursor: not-allowed; }
+
+/* Project covers follow the same content edges as the rest of the site. */
+.case-study > .case-cover {
+  width: min(100%, var(--container)); max-width: none;
+  padding-inline: var(--gutter); margin-inline: auto;
+}
+.contact-cta { font-size: clamp(15px, 1.25vw, 18px); margin-top: 0; box-shadow: inset 0 0 0 1px var(--line); }

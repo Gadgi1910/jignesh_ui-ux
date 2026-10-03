@@ -4,7 +4,7 @@ const assert = require('node:assert/strict');
 const { chromium } = require('../.tools/package');
 const { projects } = require('../js/content');
 const base = 'http://127.0.0.1:4173/';
-const files = ['index.html','work.html','profile.html','services.html','contact.html',...projects.map(p=>p.link)];
+const files = ['index.html','work.html','profile.html','contact.html',...projects.map(p=>p.link)];
 const report = { started: new Date().toISOString(), checks:[], errors:[], requests:[] };
 const save = () => fs.writeFileSync('test-results/verification.json',JSON.stringify(report,null,2));
 async function check(name, run) {
@@ -45,7 +45,7 @@ async function check(name, run) {
         const data=await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,broken:[...document.images].filter(i=>i.complete&&i.naturalWidth===0).map(i=>i.src),h1:!!document.querySelector('h1')?.getBoundingClientRect().height,canvas:!!document.querySelector('.hero-art canvas')}));
         assert(data.scrollWidth<=data.width+1,`${data.scrollWidth}px content in ${data.width}px viewport`);
         assert.deepEqual(data.broken,[]); assert(data.h1); assert(!data.canvas,'Reduced motion must avoid creating WebGL canvas');
-        if(width===390 && ['contact.html','profile.html','services.html','work.html','projects/fitness-live.html'].includes(file)) await page.screenshot({path:`test-results/${file.replaceAll('/','-').replace('.html','')}-mobile.png`,fullPage:true});
+        if(width===390 && ['contact.html','profile.html','work.html','projects/fitness-live.html'].includes(file)) await page.screenshot({path:`test-results/${file.replaceAll('/','-').replace('.html','')}-mobile.png`,fullPage:true});
       });
     }
   }
@@ -95,12 +95,6 @@ async function check(name, run) {
     await page.locator('[data-copy-email]').click();
     await page.waitForFunction(()=>document.querySelector('.copy-feedback').textContent.includes('COPIED'));
     assert.equal(await page.evaluate(()=>navigator.clipboard.readText()),'jigneshgadgi1929@gmail.com');
-  });
-  await check('Services expand with keyboard',async()=>{
-    await page.goto(base+'services.html');
-    const summary=page.locator('.service-row summary').nth(2);
-    await summary.focus(); await page.keyboard.press('Enter');
-    assert(await page.locator('.service-row').nth(2).evaluate(el=>el.open));
   });
   await check('Full-size project artwork opens and returns keyboard focus',async()=>{
     await page.goto(base+'projects/fitness-live.html');

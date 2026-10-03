@@ -4,7 +4,7 @@ body, button, input, textarea, select, .eyebrow, .section-index,
   font-family: var(--font-body);
 }
 :root {
-  --font-sans: 'DM Sans', Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-heading);
   --accent: #f94200;
   --accent-hover: #e53c00;
   --on-accent: #fff;

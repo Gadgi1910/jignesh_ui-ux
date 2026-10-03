@@ -151,3 +151,6 @@
 .footer-socials .social-name { gap: 10px; }
 .footer-socials .social-link > .arrow { justify-self: end; }
 .home-work .archive-bottom { justify-content: flex-end; }
+/* Fit the name to the same left and right content margins on every screen. */
+.site-footer > .container { container-type: inline-size; }
+.site-footer .footer-name { width: 100%; font-size: 14.9cqw; margin: 0; }
