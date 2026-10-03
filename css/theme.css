@@ -8,9 +8,9 @@ body, button, input, textarea, select, .eyebrow, .section-index,
   --accent: #f94200;
   --accent-hover: #e53c00;
   --on-accent: #fff;
-  --header-background: rgb(245 244 240 / 97%);
+  --header-background: rgb(255 255 255 / 97%);
   --surface-inverse: #111;
-  --text-inverse: #f5f4f0;
+  --text-inverse: #fff;
 }
 :root[data-theme='dark'] {
   --ink: #f1f0e9;
