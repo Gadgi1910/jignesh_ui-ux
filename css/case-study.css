@@ -7,7 +7,7 @@
 .case-client > span { color: var(--accent); margin-left: 4px; font-size: 12px; vertical-align: super; }
 .case-intro h1 { font-size: clamp(39px, 4.7vw, 68px); line-height: 1.1; letter-spacing: -.05em; font-weight: 500; max-width: 1150px; }
 .case-intro-aside { padding-top: 4px; display: grid; grid-template-columns: 1.4fr 1fr; gap: 90px; }
-.case-intro-aside > p { font-size: 18px; line-height: 1.8; color: var(--muted); max-width: 700px; }
+.case-description > p { font-size: 18px; line-height: 1.8; color: var(--muted); max-width: 700px; }
 .case-facts { display: grid; grid-template-columns: 1.2fr 1fr; gap: 30px 30px; margin: 0; }
 .case-facts dt { font-size: 12px; color: var(--muted); margin-bottom: 9px; }
 .case-facts dd { font-size: 13px; line-height: 1.8; }
@@ -71,7 +71,7 @@
   .case-client { margin-bottom: 20px; font-size: 16px; }
   .case-intro h1 { font-size: clamp(38px, 9.4vw, 62px); }
   .case-intro-aside { grid-template-columns: 1fr; gap: 28px; }
-  .case-intro-aside > p { font-size: 16px; }
+  .case-description > p { font-size: 16px; }
   .case-facts { gap: 24px; margin-top: 28px; }
   .case-facts dd { font-size: 12px; }
   .case-cover { width: calc(100% - 20px); padding-top: 122px; }
@@ -93,3 +93,27 @@
   .case-next-arrow { position: absolute; right: 0; bottom: 0; width: 45px; height: 45px; font-size: 25px; }
   .case-palette > div { min-height: 140px; padding: 25px; }
 }
+
+/* Project preview: the existing orange accent fills the pill on interaction. */
+.preview-cta {
+  position: relative; isolation: isolate; overflow: hidden;
+  display: inline-flex; align-items: center; gap: 16px;
+  margin-top: 28px; padding: 6px 24px 6px 6px; min-height: 64px;
+  border: 0; border-radius: 100px; background: var(--secondary); color: var(--ink);
+  font-family: var(--font-heading); font-size: 18px; font-weight: 500;
+  line-height: 1.4; white-space: nowrap; transition: color .3s;
+}
+.preview-cta::before {
+  content: ''; position: absolute; z-index: -1; left: 6px; top: 6px; bottom: 6px;
+  width: 52px; border-radius: inherit; background: var(--accent);
+  transition: width .35s var(--ease), inset .35s var(--ease);
+}
+.preview-icon {
+  display: grid; place-items: center; width: 52px; height: 52px;
+  flex-shrink: 0; border-radius: 50%; color: var(--on-accent);
+}
+.preview-icon > .tabler-icon { width: 22px; height: 22px; }
+.preview-label { position: relative; }
+.preview-cta:is(:hover, :focus-visible) { color: var(--on-accent); }
+.preview-cta:is(:hover, :focus-visible)::before { inset: 0; width: 100%; }
+.preview-cta:disabled { cursor: not-allowed; }

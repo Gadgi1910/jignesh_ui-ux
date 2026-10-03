@@ -1,4 +1,5 @@
 const icon = require('./icons.cjs');
+const previewCta = require('./preview-cta.cjs');
 /* Shared editorial case study template. All six projects use this layout. */
 const fs = require('node:fs');
 const path = require('node:path');
@@ -14,7 +15,7 @@ module.exports = function projectPage(p, index, projects, helpers) {
     <div class="case-breadcrumb">${textLink('ALL WORK', '../work.html')}${label(`CASE STUDY / 0${index + 1}`)}</div>
     <div class="case-intro-grid">
       <div><p class="case-client">${p.title}<span aria-hidden="true">®</span></p><h1 data-reveal>${p.headline}</h1></div>
-      <div class="case-intro-aside"><p>${p.overview}</p><dl class="case-facts"><div><dt>Services</dt><dd>${p.services.map(service => `<span>${service}</span>`).join('')}</dd></div><div><dt>Industry</dt><dd>${sector}</dd></div><div><dt>Year</dt><dd>${p.year}</dd></div><div><dt>Project type</dt><dd>Illustrative concept</dd></div></dl></div>
+      <div class="case-intro-aside"><div class="case-description"><p>${p.overview}</p>${previewCta(p, esc)}</div><dl class="case-facts"><div><dt>Services</dt><dd>${p.services.map(service => `<span>${service}</span>`).join('')}</dd></div><div><dt>Industry</dt><dd>${sector}</dd></div><div><dt>Year</dt><dd>${p.year}</dd></div><div><dt>Project type</dt><dd>Illustrative concept</dd></div></dl></div>
     </div>
   </header>
 

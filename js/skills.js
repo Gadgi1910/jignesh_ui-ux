@@ -24,6 +24,7 @@ async function initSkillsPlayground() {
     stopDrag();
     Composite.clear(engine.world, false);
     Engine.clear(engine);
+    previous = 0; accumulator = 0;
     width = arena.clientWidth; height = arena.clientHeight;
     const walls = [Bodies.rectangle(width/2,height+14,width+120,60,{isStatic:true}),Bodies.rectangle(-14,height/2,60,height*3,{isStatic:true}),Bodies.rectangle(width+14,height/2,60,height*3,{isStatic:true}),Bodies.rectangle(width/2,-14,width+120,60,{isStatic:true})];
     Composite.add(engine.world,walls);
@@ -99,7 +100,14 @@ async function initSkillsPlayground() {
       paint();
     });
   });
-  new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(!visible)stopDrag();wake();},{threshold:.05}).observe(arena);
+  new IntersectionObserver(entries => {
+    const entered = entries[0].isIntersecting && !visible;
+    visible = entries[0].isIntersecting;
+    if (!visible) stopDrag();
+    // Replay the drop when the panel returns, without interrupting keyboard use.
+    if (entered && !motion.matches && !arena.contains(document.activeElement)) build();
+    wake();
+  }, { threshold: .05 }).observe(arena);
   document.addEventListener('visibilitychange',()=>{if(document.hidden)stopDrag();wake();});
   motion.addEventListener('change',build);
   new ResizeObserver(()=>{if(arena.clientWidth!==width||arena.clientHeight!==height)build();}).observe(arena);
