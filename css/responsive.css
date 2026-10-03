@@ -134,7 +134,7 @@
 @media(max-width:767px) {
     :root {
         --gutter: 20px;
-        --section-space: 80px
+        --section-space: 120px
     }
 
     .header-inner {

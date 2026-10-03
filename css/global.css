@@ -449,3 +449,46 @@ noscript .notice {
     line-height: 1.65;
     color: var(--muted)
 }.page-wipe{visibility:hidden}
+
+/* Share the 120px spacing across page sections and their responsive layouts. */
+#main > .section,
+#main > .testimonial,
+#main > .contact-band,
+#main .case-editorial {
+    padding-block: var(--section-space);
+}
+
+/* Adjacent plain sections share one gap. */
+#main > .section + .section {
+    padding-top: 0;
+}
+
+#main > .page-intro,
+#main > .contact-layout {
+    padding-bottom: var(--section-space);
+}
+
+#main > .page-intro + .section {
+    padding-top: 0;
+}
+
+#main .intro-statement {
+    padding-top: var(--section-space);
+}
+#main > .hero,
+#main > .home-work,
+#main > .section:has(+ .testimonial) {
+    padding-bottom: 0;
+}
+
+#main > .testimonial + .contact-band {
+    padding-top: 0;
+}
+
+#main > .profile-art {
+    margin-top: 0;
+}
+
+#main .case-intro {
+    padding-top: var(--section-space);
+}

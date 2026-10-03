@@ -6,8 +6,6 @@ async function initSkillsPlayground() {
   const engine = Engine.create({ enableSleeping: true });
   const motion = matchMedia('(prefers-reduced-motion: reduce)');
   const pills = [...arena.querySelectorAll('.skill-pill')];
-  const reset = document.querySelector('[data-skills-reset]');
-  const status = document.querySelector('[data-skills-status]');
   let items = [], visible = false, frame = 0, previous = 0, accumulator = 0, dragging = null, width = 0, height = 0;
   const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
   function paint() {
@@ -93,7 +91,7 @@ async function initSkillsPlayground() {
     });
     el.addEventListener('blur',()=>{const item=items.find(item=>item.el===el);if(item&&!dragging){Body.setStatic(item.body,motion.matches);wake();}});
     el.addEventListener('keydown',event=>{
-      if(event.key==='Escape'){stopDrag();reset.focus();return;}
+      if(event.key==='Escape'){stopDrag();el.blur();return;}
       const direction={ArrowLeft:[-1,0],ArrowRight:[1,0],ArrowUp:[0,-1],ArrowDown:[0,1]}[event.key];
       if(!direction)return;
       event.preventDefault();const item=items.find(item=>item.el===el),step=event.shiftKey?30:12;
@@ -101,9 +99,6 @@ async function initSkillsPlayground() {
       paint();
     });
   });
-  reset.hidden=false;
-  reset.addEventListener('click',()=>{build();status.textContent='Skills reset. Ready to explore again.';});
-  document.querySelector('#skills-help').textContent='Drag a skill and let it drop. Or Tab to a pill and use the arrow keys.';
   new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(!visible)stopDrag();wake();},{threshold:.05}).observe(arena);
   document.addEventListener('visibilitychange',()=>{if(document.hidden)stopDrag();wake();});
   motion.addEventListener('change',build);

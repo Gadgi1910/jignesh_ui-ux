@@ -13,6 +13,6 @@
     --container: 1440px;
     --gutter: clamp(24px, 4.45vw, 64px);
     --grid-columns: 12;
-    --section-space: clamp(88px, 10vw, 160px);
+    --section-space: 120px;
     --ease: cubic-bezier(.22, 1, .36, 1)
 }
