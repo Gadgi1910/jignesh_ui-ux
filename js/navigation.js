@@ -48,6 +48,6 @@ function initNavigation() {
       else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     }
   });
-  window.matchMedia('(min-width: 768px)').addEventListener('change', event => { if (event.matches) setOpen(false, true); });
+  window.matchMedia('(min-width: 1100px)').addEventListener('change', event => { if (event.matches) setOpen(false, true); });
   window.addEventListener('pageshow', event => { if (event.persisted) setOpen(false, true); });
 }

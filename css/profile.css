@@ -187,7 +187,7 @@
 .stats-heading .dot { width: 10px; height: 10px; border-radius: 3px; }
 .stats-heading h2 { font-size: clamp(32px, 3.8vw, 54px); font-weight: 500; letter-spacing: -.045em; line-height: 1.15; }
 .stats-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px; }
-.stats-card { background: #fff; padding: 32px 28px; min-width: 0; }
+.stats-card { background: var(--secondary); padding: 32px 28px; min-width: 0; }
 .stats-value { font-family: var(--font-heading); font-size: clamp(64px, 7.3vw, 104px); font-weight: 600; letter-spacing: -.055em; line-height: 1.1; margin: 12px 0 36px; }
 .stats-card-copy { border-top: 1px solid var(--line); padding-top: 28px; }
 .stats-card h3 { font-size: clamp(21px, 2vw, 28px); line-height: 1.2; font-weight: 500; letter-spacing: -.04em; margin-bottom: 12px; }

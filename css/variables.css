@@ -1,18 +1,17 @@
-﻿@font-face { font-family: 'Space Grotesk'; src: url('../assets/fonts/space-grotesk-latin.woff2') format('woff2'); font-weight: 300 700; font-style: normal; font-display: swap; }
-@font-face { font-family: 'JetBrains Mono'; src: url('../assets/fonts/jetbrains-mono-latin.woff2') format('woff2'); font-weight: 100 800; font-style: normal; font-display: swap; }
-
+@font-face { font-family: 'Codec Pro'; src: url('../assets/fonts/CodecPro-Regular.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
+@font-face { font-family: 'Codec Pro'; src: url('../assets/fonts/CodecPro-Italic.ttf') format('truetype'); font-weight: 400; font-style: italic; font-display: swap; }
 :root {
-    --font-heading: 'Space Grotesk', Arial, Helvetica, sans-serif;
-    --font-body: 'JetBrains Mono', 'Courier New', monospace;
-    --ink: #111;
-    --paper: #fff;
-    --secondary: #fff;
-    --muted: #676760;
-    --line: #d2d1ca;
+    --font-heading: 'Codec Pro', Arial, Helvetica, sans-serif;
+    --font-body: 'Codec Pro', Arial, Helvetica, sans-serif;
+    --ink: #202020;
+    --paper: #f5f5f5;
+    --secondary: #eaeaea;
+    --muted: #666666;
+    --line: #d7d7d7;
     --accent: #f94200;
     --container: 1440px;
     --gutter: clamp(24px, 4.45vw, 64px);
     --grid-columns: 12;
     --section-space: 120px;
-    --ease: cubic-bezier(.22, 1, .36, 1)
+    --ease: cubic-bezier(.22, 1, .36, 1);
 }
